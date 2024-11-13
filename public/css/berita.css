@@ -1,0 +1,143 @@
+/* Reset margin, padding, dan box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh; /* Mengatur tinggi viewport */
+    display: flex;
+    flex-direction: column;
+    background-image: url('/img/background-tentang.jpeg'); /* Ganti dengan path foto Anda */
+    background-size: cover; /* Mengatur gambar menutupi seluruh area */
+    background-position: center; /* Memusatkan gambar */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    background-attachment: fixed; /* Membuat latar belakang tetap di tempat saat di-scroll */
+}
+
+
+/* Header dan Footer */
+header, footer {
+    background-color: #4581bd; /* Ganti dengan warna pilihan Anda */
+    padding: 20px;
+    text-align: center;
+    color: rgb(255, 252, 252); /* Warna teks dalam header/footer */
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+header h1, footer h1 {
+    margin-bottom: 10px;
+}
+
+/* Navbar */
+.nav-berita {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-berita a {
+    color: #c98e8e; /* Ganti dengan warna yang diinginkan, contoh: merah-oranye */
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Efek bayangan */
+}
+
+.nav-berita a:hover {
+    background-color: #ff9999; /* Warna latar saat di-hover */
+    color: #c7c1c1; /* Warna teks saat di-hover */
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.6), 0 0 20px rgba(0, 123, 255, 0.5);
+}
+
+/* Background image (Opsional) */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Pastikan gambar menutupi seluruh area */
+    background-position: center; /* Pusatkan gambar */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar */
+    z-index: -1;
+}
+
+
+/* Footer tetap di bawah */
+footer {
+    margin-top: auto;
+    padding: 20px;
+}
+
+/* Konten berita */
+.main-content {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    background: #c9c9c9;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek batas pada konten */
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 12px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading dalam konten */
+h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+}
+
+/* Konten teks */
+.content-section {
+    line-height: 1.7;
+    font-size: 1.1em;
+    color: #333; /* Ganti warna teks dengan warna yang diinginkan */
+}
+
+
+.content-section p {
+    margin-bottom: 15px;
+    padding: 12px;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.content-section p:hover {
+    background: #e6f7ff;
+    border-color: #003366;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    animation: glow 0.5s ease-in-out alternate; /* Animasi glow */
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.4), 0 0 20px rgba(0, 123, 255, 0.2);
+    }
+    to {
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.6), 0 0 30px rgba(0, 123, 255, 0.4);
+    }
+}

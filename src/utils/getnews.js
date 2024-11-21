@@ -1,7 +1,7 @@
 const request = require('postman-request');
 
 const getNews = (category, callback) => {
-    const url = 'http://api.mediastack.com/v1/news?access_key=fc48dacb8752bd57aa9c0166e71c3df6&categories=' + 
+    const url = 'http://api.mediastack.com/v1/news?access_key=01ebf53117f41dee273cbc794c20bb31&categories=' + 
     encodeURIComponent(category) + '&countries=id';
 
     request({ url: url, json: true }, (error, response) => {
